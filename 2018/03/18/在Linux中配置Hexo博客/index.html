@@ -79,13 +79,18 @@
 
 
 
+<meta name="description" content="1.创建第一个博客 进入一个安全的目录，比如cd ~/Desktop或者cd ~/Documents（只有～里面的目录是可以碰的，表示进入到当前用户的目录） 在GitHub上创建一个空repo，repo的名称是[你的用户名.github.io]（请将你的用户名替换成真正的用户名） npm install -g hexo-cli，全局安装Hexo hexo init myBlog cd myBlog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开博大吉">
-<meta property="og:url" content="http://yoursite.com/2018/03/18/开博大吉/index.html">
+<meta property="og:title" content="在Linux中配置Hexo博客">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/在Linux中配置Hexo博客/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:updated_time" content="2018-03-18T10:48:55.016Z">
+<meta property="og:description" content="1.创建第一个博客 进入一个安全的目录，比如cd ~/Desktop或者cd ~/Documents（只有～里面的目录是可以碰的，表示进入到当前用户的目录） 在GitHub上创建一个空repo，repo的名称是[你的用户名.github.io]（请将你的用户名替换成真正的用户名） npm install -g hexo-cli，全局安装Hexo hexo init myBlog cd myBlog">
+<meta property="og:image" content="https://pengyize.github.io/images/hexo.png">
+<meta property="og:updated_time" content="2018-03-18T11:45:33.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开博大吉">
+<meta name="twitter:title" content="在Linux中配置Hexo博客">
+<meta name="twitter:description" content="1.创建第一个博客 进入一个安全的目录，比如cd ~/Desktop或者cd ~/Documents（只有～里面的目录是可以碰的，表示进入到当前用户的目录） 在GitHub上创建一个空repo，repo的名称是[你的用户名.github.io]（请将你的用户名替换成真正的用户名） npm install -g hexo-cli，全局安装Hexo hexo init myBlog cd myBlog">
+<meta name="twitter:image" content="https://pengyize.github.io/images/hexo.png">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/18/开博大吉/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/18/在Linux中配置Hexo博客/"/>
 
 
 
 
 
-  <title>开博大吉 | My Blog</title>
+  <title>在Linux中配置Hexo博客 | My Blog</title>
   
 
 
@@ -228,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/18/开博大吉/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/18/在Linux中配置Hexo博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tangxiao">
@@ -245,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开博大吉</h1>
+          <h1 class="post-title" itemprop="name headline">在Linux中配置Hexo博客</h1>
         
 
         <div class="post-meta">
@@ -257,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-18T10:48:19+00:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-18T10:55:16+00:00">
                 2018-03-18
               </time>
             
@@ -295,7 +300,54 @@
       
 
       
-        
+        <h3 id="1-创建第一个博客"><a href="#1-创建第一个博客" class="headerlink" title="1.创建第一个博客"></a>1.创建第一个博客</h3><ol>
+<li>进入一个安全的目录，比如<code>cd ~/Desktop</code>或者<code>cd ~/Documents</code>（只有～里面的目录是可以碰的，表示进入到当前用户的目录）</li>
+<li>在GitHub上创建一个空repo，repo的名称是[你的用户名.github.io]（请将你的用户名替换成真正的用户名）</li>
+<li><code>npm install -g hexo-cli</code>，全局安装Hexo</li>
+<li><code>hexo init myBlog</code></li>
+<li><code>cd myBlog</code></li>
+<li><code>npm i</code></li>
+<li><code>hexo new 开博大吉</code>，你会看到一个md文件的路径</li>
+<li><code>vi xxxx.md</code>，编辑这个md文件</li>
+<li><code>vi _config.yml</code><ol>
+<li>把第6行的title改成你想要的名字</li>
+<li>把第9行的author改成你的大名</li>
+<li>把最后一行的type改成<code>type: git</code></li>
+<li>在最后一行后面新增一行，左边与type齐平，加上一行<code>repo: 仓库地址</code>(请将仓库地址改为[你的用户名。github.io]对应的仓库地址，仓库地址以<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:开头)</li>
+<li>第4步的repo:后面有个空格</li>
+</ol>
+</li>
+<li><code>npm install hexo-deployer-git --save</code>，安装git部署插件</li>
+<li><code>hexo deploy</code></li>
+<li>进入[你的用户名.github.io]对应的repo，打开GitHub Pages功能，如果已经打开了，就直接点击链接预览</li>
+<li>你现在应该看到了你的博客</li>
+</ol>
+<h3 id="2-第二篇博客"><a href="#2-第二篇博客" class="headerlink" title="2.第二篇博客"></a>2.第二篇博客</h3><ol>
+<li><code>hexo new 第二篇博客</code></li>
+<li>复制显示的路径，使用<code>vi</code>来编辑它</li>
+<li><code>hexo generate</code></li>
+<li><code>hexo deploy</code></li>
+<li>去看看你的博客，应该就能看到第二篇博客了</li>
+</ol>
+<h3 id="3-换主题"><a href="#3-换主题" class="headerlink" title="3.换主题"></a>3.换主题</h3><ol>
+<li><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes v</a>上面有主题集合</li>
+<li>找一个主题，进入主题的GitHub首页</li>
+<li>复制它的SSH地址或HTTPS地址，假设地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:iissnan/hexo-theme-next.git</li>
+<li><code>cd themes</code></li>
+<li><code>git clone git@github.com:iissnan/hexo-theme-next.git</code></li>
+<li><code>cd ..</code></li>
+<li>将_config.yml的75行改为<code>theme:hexo-theme-next</code>，保存</li>
+<li><code>hexo generate</code></li>
+<li><code>hexo deploy</code></li>
+<li>等一分钟，然后刷新你的博客，将会看到一个新的外观，如果不喜欢这个主题，就回到第1步，重选一个主题</li>
+</ol>
+<h3 id="4-上传源代码"><a href="#4-上传源代码" class="headerlink" title="4.上传源代码"></a>4.上传源代码</h3><p>注意[你的用户名.github.io]上保存的只是你的博客，并没有保存[生成博客的程序代码]，您需要再创建一个名为blog-generator的空仓库，用来保存myBlog里面的[生成博客的程序代码]。</p>
+<ol>
+<li>在GitHub创建blog-generator空仓库</li>
+<li>按图中再终端进入你的博客目录中执行，用SSH地址！<img src="https://pengyize.github.io/images/hexo.png" alt="image"></li>
+<li>以后每次hexo deploy完之后，博客就会更新，还需要add/commit/push一下，以防博客数据丢失！</li>
+</ol>
+
       
     </div>
     
@@ -319,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/18/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/03/18/开博大吉/" rel="next" title="开博大吉">
+                <i class="fa fa-chevron-left"></i> 开博大吉
               </a>
             
           </div>
@@ -328,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/18/在Linux中配置Hexo博客/" rel="prev" title="在Linux中配置Hexo博客">
-                在Linux中配置Hexo博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -383,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -426,6 +483,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建第一个博客"><span class="nav-number">1.</span> <span class="nav-text">1.创建第一个博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-第二篇博客"><span class="nav-number">2.</span> <span class="nav-text">2.第二篇博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-换主题"><span class="nav-number">3.</span> <span class="nav-text">3.换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-上传源代码"><span class="nav-number">4.</span> <span class="nav-text">4.上传源代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
